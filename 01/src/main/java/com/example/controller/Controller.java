@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ImageServiceController {
+public class Controller {
 
     @Autowired
     ImageServiceConfig imageServiceConfig;
 
     @RequestMapping(value = "/")
-    ResponseEntity<?> get() {
+    ResponseEntity<?> getConfig() {
         return new ResponseEntity(imageServiceConfig, HttpStatus.OK);
     }
 }
